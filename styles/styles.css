@@ -1,0 +1,132 @@
+* {
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #0A0C1B;
+    --color-over-img: rgba(109, 6, 173, 0.5);
+    --text-part-bg: hsl(244, 38%, 16%);
+    --span-color: hsl(277, 64%, 61%);
+
+}
+
+body {
+    background: var(--bg-color);
+    position: relative;
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 78rem;
+    height: 31rem;
+}
+
+h1, h5 {
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+h1 {
+    font-size: 2.4rem;
+    margin-bottom: 1.5rem;
+    padding-right: 7rem;
+}
+
+h5 {
+    font-size: 1.7rem;
+}
+
+p {
+    color: hsla(0, 0%, 100%, 0.5);
+    font-family: 'Lexend Deca';
+    font-size: .9rem;
+    font-weight: lighter;
+    line-height: 1.7rem;
+}
+
+.bg-img {
+    background: linear-gradient(var(--color-over-img),var(--color-over-img)),url(../img/image-header-desktop.jpg);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.text-part {
+    background: var(--text-part-bg);
+    width: 90%;
+    padding: 4.8rem 0 0 5rem;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.text-part p {
+    max-width: 48ch;
+    padding-right: 3rem;
+    margin-bottom: 6rem;
+    font-size: 1rem;
+}
+
+span {
+    color: var(--span-color);
+}
+
+.flex {
+    display: flex;
+    justify-content: left;
+}
+
+@media screen and (max-width:1280px) {
+    body {
+        transform: scale(.7);
+    }
+
+    main {
+        flex-direction: column-reverse;
+        height: 78rem;
+        width: 27rem;
+        justify-content: center;
+    }
+
+    .bg-img {
+        height: 30%;
+        background-size: cover;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: 10px;
+    }
+
+    .text-part {
+        padding: 0;
+        width: 100%;
+        text-align: center;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-left-radius: 0;
+    }
+
+    .flex {
+        flex-direction: column;
+        justify-content: left;
+    }
+
+    h1 {
+        padding: 0 1rem;
+        margin-top: 3rem;
+
+    }
+
+    .text-part p {
+        padding: 0 2rem;
+        font-size: 1.3rem;
+        line-height: 2rem;
+        margin-bottom: 3rem;
+    }
+}
